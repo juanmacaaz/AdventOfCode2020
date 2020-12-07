@@ -38,15 +38,16 @@ print(count)
 
 # A
 
-b = []
+b = 0
 
 def insideBag2(key, count):
+    global b
     if key == 'other': return 1
     for bag in bags[key]:
         for _ in range(bag[0]):
             insideBag2(bag[1], count)
-            b.append(0)
+            b += 1
 
 insideBag2('shinygold', count)
 
-print(len(b))
+print(b)
