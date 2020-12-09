@@ -52,4 +52,3 @@ for i in range(len(RAM)):
         if pc == len(RAM):
             print(ac)
             exit()
-        
