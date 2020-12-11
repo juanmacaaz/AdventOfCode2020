@@ -17,8 +17,6 @@ for i in range(len(data)-1):
 
 print(diference[1]*diference[3])
 
-print(diference)
-
 groups = dict()
 
 for i in range(len(data)-1):
@@ -29,16 +27,6 @@ for i in range(len(data)-1):
             if data[i] not in groups.keys():
                 groups[data[i]] = []
             groups[data[i]].append((data[i+x], data[i]))
-
-combinations = 1
-
-def claveEnPair(c, pairs):
-    for x in pairs:
-        if c == x[0]:
-            return True
-    return False
-
-total = 0
 
 dp = {}
 def calcRec(index):
@@ -53,4 +41,3 @@ def calcRec(index):
     return s
 
 print(calcRec(0))
-
