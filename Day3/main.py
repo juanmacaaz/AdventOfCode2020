@@ -17,7 +17,8 @@ hPos = 0
 arboles = 0
 nada    = 0
 
-for line in data:
+for line in data.read().split('\n')[:-1]:
+    print(len(line))
     hSize = len(line)
     mapa.append(line)
     vSize += 1
